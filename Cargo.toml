@@ -1,0 +1,13 @@
+[package]
+name = "atomio"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Crate to parse chemical formula"
+repository = "https://github.com/DevHyperCoder/atomio"
+homepage = "https://github.com/DevHyperCoder/atomio"
+documentation = "https://docs.rs/atomio"
+
+[dependencies]
+pest = "2.0"
+pest_derive = "2.0"

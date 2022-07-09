@@ -1,0 +1,18 @@
+count = {ASCII_DIGIT*}
+root_count = {ASCII_DIGIT+}
+
+element_name = {ASCII_ALPHA_UPPER ~ (ASCII_ALPHA_LOWER*)}
+element = {  element_name ~ count }
+
+group = { "(" ~ element ~ (expr)+ ~")" ~ count }
+
+root_group = {root_count ~ element ~ (expr)*}
+
+expr = _{
+	element |
+    group |
+    root_group |
+    "."
+}
+
+main = _{ SOI ~ expr* ~ EOI}
